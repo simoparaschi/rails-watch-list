@@ -1,5 +1,5 @@
 class AddMovieIdToBookmarks < ActiveRecord::Migration[7.1]
   def change
-    add_column :bookmarks, :movie_id, :integer
+    add_reference :bookmarks, :movie, null: false, foreign_key: true
   end
 end
