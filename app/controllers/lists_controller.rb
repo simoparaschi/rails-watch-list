@@ -7,6 +7,7 @@ class ListsController < ApplicationController
     @id = params[:id]
     @list = List.find(@id)
     @movies = @list.movies
+    @bookmarks = @list.bookmarks
   end
 
   def new
