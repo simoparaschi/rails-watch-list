@@ -7,3 +7,14 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+10.times do
+  rating = rand(0..10)
+  movie = Movie.new(
+    title: Faker::Movie.title,
+    overview: Faker::Movies::VForVendetta.quote,
+    poster_url: "https://image.tmdb.org/t/p/original/MvYpKlpFukTivnlBhizGbkAe3v.jpg",
+    rating: rating
+  )
+  movie.save!
+end
