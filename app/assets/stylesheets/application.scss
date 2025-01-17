@@ -56,3 +56,13 @@ a:hover {
   color: #000000;
   text-decoration: underline;
 }
+
+.line {
+  display: flex;
+  justify-content: space-between;
+}
+
+.line-item {
+  display: flex;
+  flex-direction: column;
+}

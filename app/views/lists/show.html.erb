@@ -11,11 +11,19 @@
 
     <p><strong>Movie - bookmark comment</strong></p>
     <% @bookmarks.each do |bookmark| %>
-      <p>
-        <%= bookmark.movie.title %> - <%= bookmark.comment %> - <%= link_to "Delete",
-        list_bookmark_path(@list, bookmark),
-        data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
-      </p>
+      <div class="line">
+
+        <div class="line-item">
+          <p><%= bookmark.movie.title %> - <%= bookmark.comment %></p>
+        </div>
+
+        <div class="row-item">
+           <%= link_to "Delete",
+              list_bookmark_path(@list, bookmark),
+              data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn-sec" %>
+        </div>
+
+      </div>
     <% end %>
 
   </div>
