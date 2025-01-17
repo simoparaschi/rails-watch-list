@@ -13,13 +13,13 @@
     <% @bookmarks.each do |bookmark| %>
       <p>
         <%= bookmark.movie.title %> - <%= bookmark.comment %> - <%= link_to "Delete",
-        list_path(@list),
+        list_bookmark_path(@list, bookmark),
         data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
       </p>
     <% end %>
 
   </div>
-  
+
   <%= link_to "Back to lists", lists_path() %>
 
 </div>
