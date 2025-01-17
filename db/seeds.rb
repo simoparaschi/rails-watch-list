@@ -25,7 +25,6 @@ url = "https://tmdb.lewagon.com/movie/top_rated"
 user_serialized = URI.parse(url).read
 user = JSON.parse(user_serialized)
 
-
 user["results"].each do |item|
   movie = Movie.new(
     title: item["original_title"],

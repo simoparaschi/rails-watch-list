@@ -5,7 +5,10 @@
   </div>
 
   <div class="main-content">
-    <%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
+    <% if  @list.photo.key.present? %>
+      <%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
+    <% end %>
+
     <h2>Movie - bookmark comment</h2>
     <% @bookmarks.each do |bookmark| %>
       <p>
