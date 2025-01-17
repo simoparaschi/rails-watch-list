@@ -4,7 +4,7 @@
     <%= link_to "Cancel", list_path(@list), class: "btn-sec" %>
   </div>
 
-  <div class="form-content">
+  <div>
     <%= simple_form_for [@list, @bookmark]  do |f| %>
       <%= f.input :comment %>
       <%= f.association :movie %>
