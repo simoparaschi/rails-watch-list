@@ -4,7 +4,7 @@
 @import "config/bootstrap_variables";
 
 // External libraries
-// @import "bootstrap";
+@import "bootstrap";
 @import "font-awesome";
 
 // Your CSS partials
@@ -23,6 +23,18 @@ h1 {
   font-family: "Roboto Mono", serif !important;
 }
 
+
 .container {
-  padding: 24px;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
